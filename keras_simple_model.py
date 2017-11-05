@@ -3,6 +3,9 @@ from keras.layers import Input, Dense, Activation, ZeroPadding2D, BatchNormaliza
 from keras.layers import AveragePooling2D, MaxPooling2D, Dropout, GlobalMaxPooling2D, GlobalAveragePooling2D
 from keras.models import Model
 import keras.backend as K
+from IPython.display import SVG
+from keras.utils.vis_utils import model_to_dot
+from keras.utils import plot_model
 
 K.set_image_data_format('channels_last')
 
