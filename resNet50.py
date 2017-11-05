@@ -155,8 +155,8 @@ def ResNet50(input_shape=(64, 64, 3), classes=6):
 
     # Stage 5
     X = convolutional_block(X, f=3, s=2, filters=[512, 512, 2048], stage=5, block='a')
-    X = identity_block(X, 3, [256, 256, 2048], stage=5, block='b')
-    X = identity_block(X, 3, [256, 256, 2048], stage=5, block='c')
+    X = identity_block(X, 3, [512, 512, 2048], stage=5, block='b')
+    X = identity_block(X, 3, [512, 512, 2048], stage=5, block='c')
 
     # AVGPOOL
     X = AveragePooling2D((2, 2), name='avg_pool')(X)
